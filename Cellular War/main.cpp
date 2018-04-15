@@ -36,6 +36,26 @@ int main()
 
     while (window.isOpen())
     {
+        sf::Event event;
+        while(window.pollEvent(event))
+        {
+            switch (event.type)
+            {
+            case sf::Event::Closed:
+                window.close();
+                break;
+
+            case sf::Event::KeyPressed:
+                if (sf::Keyboard::Escape == event.key.code)
+                {
+                    window.close();
+                }
+                break;
+
+            default:
+                break;
+            }
+        }
         board.update();
 
         window.clear();
