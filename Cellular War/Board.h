@@ -9,24 +9,21 @@
 #include "Matrix.h"
 #include "HSVColor.h"
 
-using namespace std;
-using namespace sf;
-
 class Board
 {
 public:
-	Board();
+    Board();
 
-	void update();
+    void update();
 
-	void draw(RenderWindow &window);
+    void draw(sf::RenderWindow &window);
 
 private:
-	int width, height;
-	Matrix m,mbuf;
+    int width, height;
+    Matrix m,mbuf;
 
-	Image image;
-	Texture texture;
-	Sprite sprite;
+    sf::Image image;
+    sf::Texture texture;
+    sf::Sprite sprite;
 };
 
